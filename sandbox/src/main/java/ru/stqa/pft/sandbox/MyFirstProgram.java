@@ -5,23 +5,24 @@ public class MyFirstProgram {
 	public static void main(String[] args) {
 		hello("misha");
 
+		Square s = new Square(5);
+//		s.l = 5;
+		System.out.println("Площадь квадрата со стороной " + s.l + " = " + area(s));
 
-		double len = 3;
-		System.out.println("Площадь квадрата со стороной " + len + " = " + area(len));
-
-		double a = 3;
-		double b = 4;
-		System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+		Rectangle r = new Rectangle();
+		r.a = 3;
+		r.b = 4;
+		System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + area(r));
 	}
 	public static void hello(String somebody) {
 		System.out.println("Hello, " + somebody + "!");
 	}
-
-	public static double area(double l) {
-		return l * l;
+//Функция подсчета площади квадрата
+	public static double area(Square s) {
+		return s.l * s.l;
 	}
 
-	public static double area(double a, double b) {
-		return a * b;
+	public static double area(Rectangle r) {
+		return r.a * r.b;
 	}
 }
